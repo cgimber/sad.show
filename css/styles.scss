@@ -78,7 +78,7 @@ body.isLoading {
     .subtitle {
         font-size: 3rem;
         margin: 0;
-        padding: 0;        
+        padding: 0;
     }
 }
 
@@ -140,11 +140,17 @@ textarea {
 /* media queries
 ---------------------------------------------------------------------*/
 
-@media only screen and (min-width: 1140px) {}
+@media only screen and (max-width: 1140px) {}
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .bg__container {
+        .title {
+            font-size: 6rem;
+        }
+    }
+}
 
-@media only screen and (min-width: 480px) {}
+@media only screen and (max-width: 480px) {}
 
 
 /* helper classes
