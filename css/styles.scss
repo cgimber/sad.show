@@ -1,0 +1,181 @@
+@import "vendor/bourbon/bourbon";
+
+/* fonts
+---------------------------------------------------------------------*/
+
+@include font-face('audimat', '../fonts/audimat-regular-webfont', $file-formats: eot ttf woff);
+@include font-face('audimat', '../fonts/audimat-bold-webfont', bold, $file-formats: eot ttf woff);
+@include font-face('audimat', '../fonts/audimat-italic-webfont', normal, italic, $file-formats: eot ttf woff);
+@include font-face('audimat', '../fonts/audimat-bolditalic-webfont', bold, italic, $file-formats: eot ttf woff);
+
+/* colors
+---------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------*/
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 62.5%;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+body.isLoading {
+    overflow: hidden;
+}
+
+.bg__container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    background-color: black;
+    background-image: url('../assets/lastname-firstname-portrait.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @include display(flex);
+    @include justify-content(center);
+    @include align-items(center);
+    color: white;
+    .title {
+        font-size: 20rem;
+        margin: 0;
+        padding: 0;
+    }
+    .subtitle {
+        font-size: 3rem;
+        margin: 0;
+        padding: 0;        
+    }
+}
+
+.bg__img {
+    background-color: white;
+    // position: fixed;
+    z-index: 1;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+// hr {
+//     display: block;
+//     height: 1px;
+//     border: 0;
+//     border-top: 1px solid #ccc;
+//     margin: 1em 0;
+//     padding: 0;
+// }
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* main
+---------------------------------------------------------------------*/
+
+
+/* media queries
+---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 1140px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 480px) {}
+
+
+/* helper classes
+---------------------------------------------------------------------*/
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
