@@ -110,7 +110,7 @@ header {
                 display: inline-block;
             }
         }
-        span {
+        .strike-through {
             // text-decoration: line-through;
             display: inline-block;
             position: relative;
@@ -119,14 +119,17 @@ header {
             &:before {
                 content: "";
                 position: absolute;
-                top: 50%;
+                top: 45%;
                 left: 0;
-                right: 0;
+                right: -5px;
                 height: 5px;
                 /* ADJUST HEIGHT TO ADD WEIGHT */
                 background: black;
                 /* CHANGE COLOR TO SUIT */
             }
+        }
+        .emphasis {
+            color: black;
         }
     }
 }

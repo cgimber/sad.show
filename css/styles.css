@@ -107,19 +107,21 @@ header {
       @media only screen and (max-width: 980px) {
         header .subtitle br {
           display: inline-block; } }
-    header .subtitle span {
+    header .subtitle .strike-through {
       display: inline-block;
       position: relative; }
-      header .subtitle span:before {
+      header .subtitle .strike-through:before {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 0;
-        right: 0;
+        right: -5px;
         height: 5px;
         /* ADJUST HEIGHT TO ADD WEIGHT */
         background: black;
         /* CHANGE COLOR TO SUIT */ }
+    header .subtitle .emphasis {
+      color: black; }
 
 .students {
   padding: 0 5rem;
