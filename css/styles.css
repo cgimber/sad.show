@@ -92,6 +92,9 @@ header {
     margin: 0;
     padding: 0;
     color: black; }
+    @media only screen and (max-width: 980px) {
+      header .title {
+        font-size: 10rem; } }
   header .subtitle {
     width: 100vw;
     font-size: 3rem;
@@ -101,9 +104,22 @@ header {
     color: white; }
     header .subtitle br {
       display: none; }
-      @media only screen and (max-width: 910px) {
+      @media only screen and (max-width: 980px) {
         header .subtitle br {
           display: inline-block; } }
+    header .subtitle span {
+      display: inline-block;
+      position: relative; }
+      header .subtitle span:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 5px;
+        /* ADJUST HEIGHT TO ADD WEIGHT */
+        background: black;
+        /* CHANGE COLOR TO SUIT */ }
 
 .students {
   padding: 0 5rem;
@@ -193,9 +209,6 @@ textarea {
 ---------------------------------------------------------------------*/
 /* media queries
 ---------------------------------------------------------------------*/
-@media only screen and (max-width: 951px) {
-  header .title {
-    font-size: 10rem; } }
 @media only screen and (max-width: 768px) {
   header .title {
     font-size: 5rem; }

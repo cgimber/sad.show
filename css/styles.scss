@@ -93,6 +93,9 @@ header {
         margin: 0;
         padding: 0;
         color: black;
+        @media only screen and (max-width: 980px) {
+            font-size: 10rem;
+        }
     }
     .subtitle {
         width: 100vw;
@@ -103,8 +106,26 @@ header {
         color: white;
         br {
             display: none;
-            @media only screen and (max-width: 910px) {
+            @media only screen and (max-width: 980px) {
                 display: inline-block;
+            }
+        }
+        span {
+            // text-decoration: line-through;
+            display: inline-block;
+            position: relative;
+            // margin-top: 40px;
+            // margin-left: 40px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 5px;
+                /* ADJUST HEIGHT TO ADD WEIGHT */
+                background: black;
+                /* CHANGE COLOR TO SUIT */
             }
         }
     }
@@ -190,14 +211,6 @@ textarea {
 ---------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1140px) {}
-
-@media only screen and (max-width: 951px) {
-    header {
-        .title {
-            font-size: 10rem;
-        }
-    }
-}
 
 @media only screen and (max-width: 768px) {
     header {

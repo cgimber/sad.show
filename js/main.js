@@ -28,7 +28,7 @@ var students = [{
 }, {
     "firstname": "Charlotte",
     "lastname": "Hayden",
-    "site": "#",
+    "site": "#:(",
     "submitted": true
 }, {
     "firstname": "Charu",
@@ -78,12 +78,12 @@ var students = [{
 }, {
     "firstname": "Erika",
     "lastname": "Friesen",
-    "site": "#",
+    "site": "#:(",
     "submitted": false
 }, {
     "firstname": "Giancarlos",
     "lastname": "Campos",
-    "site": "#",
+    "site": "#:(",
     "submitted": true
 }, {
     "firstname": "Gilbert",
@@ -103,12 +103,12 @@ var students = [{
 }, {
     "firstname": "Jason",
     "lastname": "Lee",
-    "site": "#",
+    "site": "#:(",
     "submitted": false
 }, {
     "firstname": "Jonathan",
     "lastname": "Smith",
-    "site": "#",
+    "site": "#:(",
     "submitted": false
 }, {
     "firstname": "Kara",
@@ -178,7 +178,7 @@ var students = [{
 }, {
     "firstname": "Niko",
     "lastname": "Le",
-    "site": "#",
+    "site": "#:(",
     "submitted": false
 }, {
     "firstname": "Noopur",
@@ -188,7 +188,7 @@ var students = [{
 }, {
     "firstname": "Oliver",
     "lastname": "Leighton",
-    "site": "#",
+    "site": "#:(",
     "submitted": true
 }, {
     "firstname": "Peitong",
@@ -258,16 +258,17 @@ $(document).ready(function() {
     for (var i = 0; i < students.length; i++) {
         // add an anchor with a portrait
         var pathToPortrait;
+        var name = students[i].firstname + ' ' + students[i].lastname;
         if (students[i].submitted) {
             numSubmitted++;
             pathToPortrait = 'assets/' + students[i].lastname.toLowerCase() + '-' + students[i].firstname.toLowerCase() + '-portrait.jpg';
         } else
             pathToPortrait = 'assets/sad-portrait.png';
-        var student = ('<a target="_blank" class="student" href="' + students[i].site + '" data-id=' + i + '>' + '<img src="' + pathToPortrait + '"/>' + '</a>');
+        var student = ('<a class="student" target="_blank" href="' + students[i].site + '" data-id=' + i + '>' + '<img src="' + pathToPortrait + '" alt="' + name + '" title="' + name + '"/>' + '</a>');
         $('.students').append(student);
     }
-    console.log(numSubmitted + " / " + students.length + " submitted\n:_(");
-    $('.title span').text(" SHOW");
+    console.log(numSubmitted + " / " + students.length + " students have submitted images\n:_(");
+    
     // start shuffler
     shuffler = requestAnimationFrame(shuffleStudents);
 
