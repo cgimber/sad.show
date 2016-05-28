@@ -54,20 +54,61 @@ body {
 body.isLoading {
   overflow: hidden; }
 
-.bg__container {
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+.bg {
+  position: fixed;
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
   position: fixed;
   background-color: black;
-  background-image: url("../assets/lastname-firstname-portrait.png");
+  background-image: url("../assets/sad-project-blk.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: white;
+  z-index: -1; }
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  pointer-events: none; }
+  header .title {
+    width: 100vw;
+    font-size: 15rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: black; }
+  header .subtitle {
+    width: 100vw;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white; }
+    header .subtitle br {
+      display: none; }
+      @media only screen and (max-width: 910px) {
+        header .subtitle br {
+          display: inline-block; } }
+
+.students {
+  padding: 0 5rem;
+  padding-top: 30rem;
+  z-index: 10;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -93,27 +134,38 @@ body.isLoading {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  color: white; }
-  .bg__container .title {
-    font-size: 20rem;
-    margin: 0;
-    padding: 0; }
-  .bg__container .subtitle {
-    font-size: 3rem;
-    margin: 0;
-    padding: 0; }
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
-.bg__img {
-  background-color: white;
-  z-index: 1; }
+.student img {
+  width: 30rem;
+  padding: 5rem;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none; }
+.student img:hover {
+  cursor: pointer;
+  -webkit-filter: none;
+  filter: none; }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none; }
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  margin: 0;
+  width: 100vw;
+  text-align: center;
+  background: white; }
+  .footer br {
+    display: none; }
+    @media only screen and (max-width: 1194px) {
+      .footer br {
+        display: inline-block; } }
 
 audio,
 canvas,
@@ -141,9 +193,20 @@ textarea {
 ---------------------------------------------------------------------*/
 /* media queries
 ---------------------------------------------------------------------*/
+@media only screen and (max-width: 951px) {
+  header .title {
+    font-size: 10rem; } }
 @media only screen and (max-width: 768px) {
-  .bg__container .title {
-    font-size: 6rem; } }
+  header .title {
+    font-size: 5rem; }
+  header .subtitle {
+    font-size: 2rem; }
+
+  .students {
+    display: none; }
+
+  .footer {
+    font-size: 2rem; } }
 /* helper classes
 ---------------------------------------------------------------------*/
 .hidden {

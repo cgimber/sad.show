@@ -52,42 +52,6 @@ body.isLoading {
     overflow: hidden;
 }
 
-.bg__container {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    background-color: black;
-    background-image: url('../assets/lastname-firstname-portrait.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    @include display(flex);
-    @include justify-content(center);
-    @include align-items(center);
-    color: white;
-    .title {
-        font-size: 20rem;
-        margin: 0;
-        padding: 0;
-    }
-    .subtitle {
-        font-size: 3rem;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-.bg__img {
-    background-color: white;
-    // position: fixed;
-    z-index: 1;
-}
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -96,6 +60,91 @@ body.isLoading {
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
+}
+
+.bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    background-color: black;
+    background-image: url('../assets/sad-project-blk.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    pointer-events: none;
+    .title {
+        width: 100vw;
+        font-size: 15rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        color: black;
+    }
+    .subtitle {
+        width: 100vw;
+        font-size: 3rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        color: white;
+        br {
+            display: none;
+            @media only screen and (max-width: 910px) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.students {
+    padding: 0 5rem;
+    padding-top: 30rem;
+    z-index: 10;
+    @include display(flex);
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+}
+
+.student img {
+    width: 30rem;
+    padding: 5rem;
+    @include filter(grayscale(100%));
+}
+
+.student img:hover {
+    cursor: pointer;
+    @include filter(none);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    margin: 0;
+    width: 100vw;
+    text-align: center;
+    background: white;
+    br {
+        display: none;
+        @media only screen and (max-width: 1194px) {
+            display: inline-block;
+        }
+    }
 }
 
 // hr {
@@ -142,11 +191,28 @@ textarea {
 
 @media only screen and (max-width: 1140px) {}
 
-@media only screen and (max-width: 768px) {
-    .bg__container {
+@media only screen and (max-width: 951px) {
+    header {
         .title {
-            font-size: 6rem;
+            font-size: 10rem;
         }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        .title {
+            font-size: 5rem;
+        }
+        .subtitle {
+            font-size: 2rem;
+        }
+    }
+    .students {
+        display: none;
+    }
+    .footer {
+        font-size: 2rem;
     }
 }
 
