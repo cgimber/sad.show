@@ -93,7 +93,7 @@ var students = [{
 }, {
     "firstname": "Giovanna",
     "lastname": "Castro",
-    "site": "http://cargocollective.com/giovannacastro",
+    "site": "http://www.giocastro.com/",
     "submitted": false
 }, {
     "firstname": "Haysol",
@@ -113,7 +113,7 @@ var students = [{
 }, {
     "firstname": "Kara",
     "lastname": "Logan",
-    "site": "http://classes.dma.ucla.edu/~kaloganslo/",
+    "site": "http://www.karalogandesign.com/",
     "submitted": true
 }, {
     "firstname": "Ky",
@@ -138,7 +138,7 @@ var students = [{
 }, {
     "firstname": "Louis",
     "lastname": "Pham",
-    "site": "http://cargocollective.com/LouisPham",
+    "site": "http://louispham.design/",
     "submitted": false
 }, {
     "firstname": "Lydia",
@@ -168,12 +168,12 @@ var students = [{
 }, {
     "firstname": "Nicholas",
     "lastname": "Tasato",
-    "site": "",
+    "site": "http://nicholastasato.com/",
     "submitted": false
 }, {
     "firstname": "Nicole",
     "lastname": "Anderson",
-    "site": "http://nicholastasato.com/",
+    "site": "http://nicoleanderson.us/",
     "submitted": false
 }, {
     "firstname": "Niko",
@@ -188,7 +188,7 @@ var students = [{
 }, {
     "firstname": "Oliver",
     "lastname": "Leighton",
-    "site": "#:(",
+    "site": "http://classes.dma.ucla.edu/Fall15/161/projects/oliver/portfolio/index.html",
     "submitted": true
 }, {
     "firstname": "Peitong",

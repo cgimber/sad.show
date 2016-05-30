@@ -111,11 +111,8 @@ header {
             }
         }
         .strike-through {
-            // text-decoration: line-through;
             display: inline-block;
             position: relative;
-            // margin-top: 40px;
-            // margin-left: 40px;
             &:before {
                 content: "";
                 position: absolute;
@@ -222,6 +219,12 @@ textarea {
         }
         .subtitle {
             font-size: 2rem;
+            .strike-through:before {
+                top: 42.5%;
+                left: 0;
+                right: -3px;
+                height: 3px;
+            }
         }
     }
     .students {

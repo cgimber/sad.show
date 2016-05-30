@@ -216,6 +216,11 @@ textarea {
     font-size: 5rem; }
   header .subtitle {
     font-size: 2rem; }
+    header .subtitle .strike-through:before {
+      top: 42.5%;
+      left: 0;
+      right: -3px;
+      height: 3px; }
 
   .students {
     display: none; }
