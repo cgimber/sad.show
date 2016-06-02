@@ -16,10 +16,10 @@ var students = [{
     "site": "http://cargocollective.com/bowanhesslegrave/",
     "submitted": true
 }, {
-    "firstname": "Caro",
+    "firstname": "Caroline",
     "lastname": "Park",
     "site": "http://caro-park.com/",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Casey",
     "lastname": "Bradford",
@@ -49,7 +49,7 @@ var students = [{
     "firstname": "Collette",
     "lastname": "DelPoso",
     "site": "http://www.collettedelposo.com/",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Danielle",
     "lastname": "Hollander",
@@ -64,7 +64,7 @@ var students = [{
     "firstname": "Dora",
     "lastname": "Parnanen",
     "site": "http://dorasofia.com/",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Echo",
     "lastname": "Theohar",
@@ -94,7 +94,7 @@ var students = [{
     "firstname": "Giovanna",
     "lastname": "Castro",
     "site": "http://www.giocastro.com/",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Haysol",
     "lastname": "Chung",
@@ -104,12 +104,12 @@ var students = [{
     "firstname": "Jason",
     "lastname": "Lee",
     "site": "#:(",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Jonathan",
     "lastname": "Smith",
     "site": "#:(",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Kara",
     "lastname": "Logan",
@@ -134,7 +134,7 @@ var students = [{
     "firstname": "Lizzie",
     "lastname": "Zweng",
     "site": "https://vimeo.com/user23326172",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Louis",
     "lastname": "Pham",
@@ -154,7 +154,7 @@ var students = [{
     "firstname": "Michael",
     "lastname": "Hsiu",
     "site": "http://michaelhsiu.com/",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Miranda",
     "lastname": "Stein",
@@ -209,7 +209,7 @@ var students = [{
     "firstname": "Samson",
     "lastname": "Klitsner",
     "site": "http://samsonklitsner.com/",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Sienna",
     "lastname": "Moffitt",
@@ -234,7 +234,7 @@ var students = [{
     "firstname": "Victor",
     "lastname": "Beteta",
     "site": "http://victorbeteta.com/",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Xiaoman",
     "lastname": "Zheng",
