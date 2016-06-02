@@ -194,7 +194,7 @@ var students = [{
     "firstname": "Peitong",
     "lastname": "Chen",
     "site": "https://www.behance.net/wipetty",
-    "submitted": false
+    "submitted": true
 }, {
     "firstname": "Sally",
     "lastname": "Kim",
