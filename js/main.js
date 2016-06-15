@@ -250,6 +250,7 @@ var numStudent = 0;
 var numSubmitted = 0;
 var content = 'project';
 var shuffler;
+var fps = isTouch() ? 10 : 30;
 
 /* document ready
 ---------------------------------------------------------------------*/
@@ -267,14 +268,15 @@ $(document).ready(function() {
         var student = ('<a class="student" target="_blank" href="' + students[i].site + '" data-id=' + i + '>' + '<img src="' + pathToPortrait + '" alt="' + name + '" title="' + name + '"/>' + '</a>');
         $('.students').append(student);
     }
+    // log the number of students who submitted images :_(
     console.log(numSubmitted + " / " + students.length + " students have submitted images\n:_(");
-    
+
     // start shuffler
-    shuffler = requestAnimationFrame(shuffleStudents);
+    shuffler = animate(shuffleStudents, fps);
 
     $('.student').hover(function() {
         /* when the mouse enters the element */
-        cancelAnimationFrame(shuffler);
+        shuffler.stop();
 
         var $id = $(this).data('id');
         var currStudent = students[$id];
@@ -286,20 +288,21 @@ $(document).ready(function() {
         $('.bg').css('background-image', 'url(' + pathToImg + ')');
         $('.title span').text(' ' + currStudent.firstname);
         $('.title').css('color', '#fff');
-        // console.log($id, pathToImg);
     }, function() {
         /* when the mouse leaves the element */
         $('.title span').text(" SHOW");
         $('.title').css('color', '#000');
-        shuffler = requestAnimationFrame(shuffleStudents);
+        shuffler.resume();
     });
 });
 
 /* functions
 ---------------------------------------------------------------------*/
-function shuffleStudents() {
-    shuffler = requestAnimationFrame(shuffleStudents);
+function isTouch() {
+    return !!(('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch));
+}
 
+function shuffleStudents() {
     var currStudent = students[numStudent];
     var pathToImg;
     if (currStudent.submitted)
@@ -307,7 +310,6 @@ function shuffleStudents() {
     else
         pathToImg = 'assets/sad-project-wht.jpg';
     $('.bg').css('background-image', 'url(' + pathToImg + ')');
-    // console.log(numStudent, pathToImg);
 
     if (numStudent < students.length - 1)
         numStudent++;
