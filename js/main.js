@@ -268,8 +268,16 @@ $(document).ready(function() {
         var student = ('<a class="student" target="_blank" href="' + students[i].site + '" data-id=' + i + '>' + '<img src="' + pathToPortrait + '" alt="' + name + '" title="' + name + '"/>' + '</a>');
         $('.students').append(student);
     }
-    // log the number of students who submitted images :_(
-    console.log(numSubmitted + " / " + students.length + " students have submitted images\n:_(");
+    // log the number of students who submitted images
+    console.log(numSubmitted + " / " + students.length + " students have submitted images");
+    // make a sad face that sheds a tear for each student who didn't follow instructions
+    console.log(":_(");
+    for (var s = 0; s < students.length - numSubmitted; s++) {
+        if (s % 2 === 0)
+            console.log("'");
+        else
+            console.log(" '");
+    }
 
     // start shuffler
     shuffler = animate(shuffleStudents, fps);
