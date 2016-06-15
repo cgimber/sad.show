@@ -152,6 +152,42 @@ header {
     @include filter(none);
 }
 
+.modal-info {
+    display: none;
+    padding: 0 10rem;
+    padding-top: 30rem;
+    // background: white;
+    color: black;
+    font-size: 2.4rem;
+    z-index: 15;
+    a:link,
+    a:visited {
+        color: black;
+        text-decoration: none;
+        border-bottom: 0.125em solid black;
+    }
+}
+
+.icon-info {
+    position: fixed;
+    top: 5rem;
+    right: 2.5rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid black;
+    color: black;
+    background: none;
+    z-index: 16;
+    &:hover {
+        color: white;
+        background: black;
+    }
+}
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -230,12 +266,30 @@ textarea {
     .students {
         display: none;
     }
+    .modal-info {
+        padding: 0 2.5rem;
+        padding-top: 19rem;
+        font-size: 1.6rem;
+    }
+    .icon-info {
+        top: 15rem;
+        left: calc(50% - 3.8rem/2);
+        &:hover {
+            color: black;
+            background: none;
+        }
+    }
     .footer {
         font-size: 2rem;
     }
 }
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 320px) {
+    .modal-info {
+        padding: 0 1.25rem;
+        padding-top: 19rem;
+    }
+}
 
 
 /* helper classes

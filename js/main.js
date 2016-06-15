@@ -250,6 +250,7 @@ var numStudent = 0;
 var numSubmitted = 0;
 var content = 'project';
 var shuffler;
+var modalIsOpen = false;
 var fps = isTouch() ? 10 : 30;
 
 /* document ready
@@ -283,6 +284,7 @@ $(document).ready(function() {
     shuffler = animate(shuffleStudents, fps);
 
     $('.student').hover(function() {
+        if (modalIsOpen) return;
         /* when the mouse enters the element */
         shuffler.stop();
 
@@ -297,10 +299,32 @@ $(document).ready(function() {
         $('.title span').text(' ' + currStudent.firstname);
         $('.title').css('color', '#fff');
     }, function() {
+        if (modalIsOpen) return;
         /* when the mouse leaves the element */
         $('.title span').text(" SHOW");
         $('.title').css('color', '#000');
         shuffler.resume();
+    });
+
+    var $toggle = $('.icon-info');
+    $toggle.click(function(event) {
+        // toggle modal, manage shuffler, and adjust styles
+        $('.modal-info').fadeToggle('fast');
+        if (!modalIsOpen) {
+            $toggle.text('X');
+            shuffler.stop();
+            $('.bg').css('opacity', '0.25');
+            $('.subtitle').css('color', '#000');
+            if ($(window).width() <= 768 && ($('.modal-info__site').offset().top >= $(window).height()))
+                $('.footer').css('position', 'relative');
+        } else {
+            $toggle.text('?');
+            shuffler.resume();
+            $('.bg').css('opacity', '1');
+            $('.subtitle').css('color', '#fff');
+            $('.footer').css('position', 'fixed');
+        }
+        modalIsOpen = !modalIsOpen;
     });
 });
 
