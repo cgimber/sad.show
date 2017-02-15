@@ -154,7 +154,9 @@ header {
 
 .modal-info {
     display: none;
-    padding: 0 10rem;
+    width: 100%;
+    max-width: 73.5rem;
+    margin: 0 auto;
     padding-top: 30rem;
     // background: white;
     color: black;
@@ -195,7 +197,9 @@ header {
     margin: 0;
     width: 100vw;
     text-align: center;
-    background: white;
+    font-weight: normal;
+    background: black;
+    color: white;
     br {
         display: none;
         @media only screen and (max-width: 1194px) {
@@ -269,7 +273,7 @@ textarea {
     .modal-info {
         padding: 0 2.5rem;
         padding-top: 19rem;
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
     .icon-info {
         top: 15rem;
