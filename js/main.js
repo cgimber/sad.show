@@ -259,14 +259,17 @@ $(document).ready(function() {
     // for each student in students
     for (var i = 0; i < students.length; i++) {
         // add an anchor with a portrait
-        var pathToPortrait;
+        var pathToPortrait, target;
         var name = students[i].firstname + ' ' + students[i].lastname;
         if (students[i].submitted) {
             numSubmitted++;
             pathToPortrait = 'assets/' + students[i].lastname.toLowerCase() + '-' + students[i].firstname.toLowerCase() + '-portrait.jpg';
         } else
             pathToPortrait = 'assets/sad-portrait.png';
-        var student = ('<a class="student" target="_blank" href="' + students[i].site + '" data-id=' + i + '>' + '<img src="' + pathToPortrait + '" alt="' + name + '" title="' + name + '"/>' + '</a>');
+        // if not a placeholder, make sure this link opens in a new tab 
+        if (students[i].site !== '#:(') target = '_blank';
+        else target = '_self';
+        var student = ('<a class="student" target="' + target + '" href="' + students[i].site + '" data-id=' + i + '>' + '<img src="' + pathToPortrait + '" alt="' + name + '" title="' + name + '"/>' + '</a>');
         $('.students').append(student);
     }
     // log the number of students who submitted images
